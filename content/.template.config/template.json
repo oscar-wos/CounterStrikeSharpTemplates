@@ -63,6 +63,10 @@
                 {
                     "choice": "datamysql",
                     "description": "An advanced template that provides classes equipped with MySQL database integration, language translation, configuration management, and command handling capabilities."
+                },
+                {
+                    "choice": "datamultisql",
+                    "description": "An advanced template that provides classes equipped with MySQL + PostgreSQL database integration, language translation, configuration management, and command handling capabilities."
                 }
             ],
             "defaultValue": "default",
@@ -103,6 +107,11 @@
             "source": "templates/datamysql",
             "target": "./",
             "condition": "(t == 'datamysql')"
+        },
+        {
+            "source": "templates/datamultisql",
+            "target": "./",
+            "condition": "(t == 'datamultisql')"
         }
     ]
 }

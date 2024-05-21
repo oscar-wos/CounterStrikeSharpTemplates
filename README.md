@@ -25,6 +25,7 @@ Currently available templates:
 - `lang`: сreates a plugin template that includes a language.
 - `configlang`: сreates a plugin template that includes both a configuration and a language.
 - `datamysql`: сreates a plugin template that includes a database (MySQL), language, configuration, and commands.
+- `datamultisql`: сreates a plugin template that includes a database (MySQL/PostgreSQL), language, configuration, and commands.
 
 [You can also add your own templates](#adding-your-own-template).
 
@@ -49,7 +50,7 @@ dotnet new cssharp -n MyPlugin --g
 Customize with `--np` (plugin name) and `--ap` (author):
 
 ```bash
-dotnet new cssharp -n MyPlugin --t datamysql --g --np "My Plugin" --ap "Author Name"
+dotnet new cssharp -n MyPlugin --t datamultisql --g --np "My Plugin" --ap "Author Name"
 ```
 
 ## Local Compilation
@@ -86,7 +87,7 @@ In `dotnet.yml`, modify these variables as needed:
 - `DOTNET_VERSION`: .NET version (default is `8.0.x`).
 - `PATH_PLUGIN`: plugin path (default is `addons/counterstrikesharp/plugins/`).
 - `START_VERSION`: starting version (default is `1.0.0`).
-- `USE_V_VERSION`: prefix the version number with a 'v' (default is `true`).
+- `USE_V_VERSION`: prefix the version number with a 'v' (default is `false`).
 
 ## Adding Your Own Template
 
